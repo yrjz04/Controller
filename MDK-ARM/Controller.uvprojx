@@ -10,14 +10,14 @@
       <TargetName>Controller</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>5060960::V5.06 update 7 for Certification (build 960)::.\ARMCC</pCCUsed>
+      <pCCUsed>5060960::V5.06 update 7 (build 960)::.\ARMCC</pCCUsed>
       <uAC6>0</uAC6>
       <TargetOption>
         <TargetCommonOption>
           <Device>STM32F103C8</Device>
           <Vendor>STMicroelectronics</Vendor>
-          <PackID>Keil.STM32F1xx_DFP.1.0.5</PackID>
-          <PackURL>http://www.keil.com/pack/</PackURL>
+          <PackID>Keil.STM32F1xx_DFP.2.4.1</PackID>
+          <PackURL>https://www.keil.com/pack/</PackURL>
           <Cpu>IRAM(0x20000000-0x20004FFF) IROM(0x8000000-0x800FFFF)  CLOCK(8000000) CPUTYPE("Cortex-M3")</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
           <StartupFile></StartupFile>
@@ -478,6 +478,21 @@
               <FileName>System_DataPool.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Src\System\System_DataPool.c</FilePath>
+            </File>
+            <File>
+              <FileName>System_Callback.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\System\System_Callback.c</FilePath>
+            </File>
+            <File>
+              <FileName>System_Debug.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\System\System_Debug.c</FilePath>
+            </File>
+            <File>
+              <FileName>System_Config.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Src\System\System_Config.h</FilePath>
             </File>
           </Files>
         </Group>

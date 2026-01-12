@@ -14,7 +14,7 @@
 #include "main.h"
 #include "stdio.h"
 #include "System/System_Config.h"
- 
+#include "System/System_Callback.h"
 typedef struct {
     UART_HandleTypeDef *huart;
     DMA_HandleTypeDef *hdma_rx;
@@ -22,6 +22,8 @@ typedef struct {
     uint8_t RxData;
     uint16_t RxDataCnt;
     uint8_t UseDMA;
+    UARTEx_RxEventCallback_t RxCallback;
+
 }UART_RxTypeDef;
  
 extern UART_RxTypeDef Uart1;   // 为UART1声明外部结构体变量

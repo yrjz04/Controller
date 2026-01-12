@@ -2,7 +2,7 @@
  * @Author: yrjz yrjz04@outlook.com
  * @Date: 2026-01-05 11:30:58
  * @LastEditors: yrjz yrjz04@outlook.com
- * @LastEditTime: 2026-01-12 17:49:08
+ * @LastEditTime: 2026-01-12 21:55:50
  * @FilePath: \Controller\Src\System\System_Config.h
  * @Description: 系统配置文件
  * @
@@ -12,6 +12,10 @@
 ///<<< Use Configuration Wizard in Context Menu >>>
 #ifndef __SYSTEM_CONFIG_H__
 #define __SYSTEM_CONFIG_H__
+
+#define PID_KP 0.5f
+#define PID_KI 0.0f
+#define PID_KD 0.0f
 
 // <e> 系统配置
 #define SYSTEM_CONFIG_ENABLE 1
@@ -31,10 +35,10 @@
 // <q> 使能UART接收事件回调函数
 #define UARTEx_RX_EVENT_CALLBACK_ENABLE 1
 // <o> UART接收事件回调函数任务数
-#define UARTEx_RX_EVENT_CALLBACK_TASK_NUM 1
+#define UARTEx_RX_EVENT_CALLBACK_TASK_NUM 2
 
 // <q> 使能GPIO外部中断回调函数
-#define GPIO_EXTI_CALLBACK_ENABLE 1
+#define GPIO_EXTI_CALLBACK_ENABLE 0
 // <o> GPIO外部中断回调函数任务数
 #define GPIO_EXTI_CALLBACK_TASK_NUM 1
 
@@ -42,10 +46,10 @@
 
 // <e> UART配置
 #define UART_CONFIG_ENABLE 1
+// <o> UART接收缓冲区大小
+#define RX_BUFFER_SIZE 256
 // <e> 使能UART1
 #define UART1_ENABLE 1
-// <o> UART接收缓冲区大小
-#define UART1_BUFFER_SIZE 256
 // <o> UART1 接收方式
 // <0=> 不使能DMA接收
 // <1=> 使能DMA接收
@@ -54,8 +58,6 @@
 
 // <e> 使能UART2
 #define UART2_ENABLE 1
-// <o> UART接收缓冲区大小
-#define UART2_BUFFER_SIZE 256
 // <o> UART2 接收方式
 // <0=> 不使能DMA接收
 // <1=> 使能DMA接收

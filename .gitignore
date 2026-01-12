@@ -1,0 +1,106 @@
+# ========================= STM32 通用过滤规则 =========================
+# 1. 编译产物（核心必过滤，占空间最大，绝对不上传）
+*.axf
+*.bin
+*.hex
+*.elf
+*.map
+*.lst
+*.out
+*.srec
+*.mot
+
+# 2. 编译中间文件/目标文件
+*.o
+*.d
+*.obj
+*.crf
+*.bak
+*.tmp
+*.dep
+*.lnp
+*.err
+*.iex
+*.htm
+*.sct
+*.i
+
+# 3. KEIL/MDK 专属过滤 (你的项目核心编译器，重中之重)
+# KEIL主工程文件【保留不上过滤】：*.uvprojx, *.uvoptx 要提交，以下是无用配置
+*.uvopt
+*.uvgui.*
+*.uvguix.*
+Objects/
+Output/
+Listing/
+RTE/
+__iar_*
+*.crf
+*.plg
+*.tra
+*.dep
+*.bak
+
+# 4. STM32CubeIDE / GCC / Makefile 兼容过滤
+Debug/
+Release/
+build/
+cmake-build-*/
+CMakeCache.txt
+CMakeFiles/
+Makefile
+*.mk
+*.cmake
+install_manifest.txt
+compile_commands.json
+
+# 5. IAR 编译器兼容过滤（备用，用不到也不影响）
+*.ewd
+*.eww
+*.ewp
+*.dep
+*.ihex
+settings/
+
+# 6. STM32CubeMX 相关 (只过滤生成的备份，核心的.ioc文件必须保留！)
+*.ioc.bak
+Backup/
+
+# ========================= 通用过滤规则 =========================
+# 1. 编辑器/IDE 配置文件
+.vscode/
+.idea/
+.cproject
+.project
+.settings/
+*.launch
+*.tmproj
+
+# 2. 系统自动生成的垃圾文件
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.ini
+*.cache
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.bak
+*~
+\$RECYCLE.BIN/
+
+# 3. 临时文件/日志文件
+*.log
+*.tmp
+*.temp
+*.swp
+*.swo
+
+# 4. 不要过滤的核心文件【防误写提醒，无需删除】
+# !*.c
+# !*.h
+# !*.uvprojx
+# !*.uvoptx
+# !*.ioc

@@ -1,7 +1,7 @@
 controller\protocol.o: ..\Src\Middleware\Protocol\Protocol.c
 controller\protocol.o: ..\Src\Middleware\Protocol\protocol.h
-controller\protocol.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
-controller\protocol.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+controller\protocol.o: C:\Users\yrj\AppData\Local\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+controller\protocol.o: C:\Users\yrj\AppData\Local\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 controller\protocol.o: ../Inc/main.h
 controller\protocol.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h
 controller\protocol.o: ../Inc/stm32f1xx_hal_conf.h
@@ -16,7 +16,7 @@ controller\protocol.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
 controller\protocol.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h
 controller\protocol.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h
 controller\protocol.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
-controller\protocol.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+controller\protocol.o: C:\Users\yrj\AppData\Local\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 controller\protocol.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h
 controller\protocol.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h
 controller\protocol.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h
