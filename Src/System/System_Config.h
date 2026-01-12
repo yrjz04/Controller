@@ -1,48 +1,101 @@
-/*** 
+/***
  * @Author: yrjz yrjz04@outlook.com
  * @Date: 2026-01-05 11:30:58
  * @LastEditors: yrjz yrjz04@outlook.com
- * @LastEditTime: 2026-01-11 16:56:50
+ * @LastEditTime: 2026-01-12 17:49:08
  * @FilePath: \Controller\Src\System\System_Config.h
- * @Description: ç³»ç»Ÿé…ç½®æ–‡ä»¶
+ * @Description: ÏµÍ³ÅäÖÃÎÄ¼þ
  * @
- * @Copyright (c) 2026 by yrjz04@outlook.com, All Rights Reserved. 
+ * @Copyright (c) 2026 by yrjz04@outlook.com, All Rights Reserved.
  */
+
+///<<< Use Configuration Wizard in Context Menu >>>
 #ifndef __SYSTEM_CONFIG_H__
 #define __SYSTEM_CONFIG_H__
 
-//ä¸²å£DMAé…ç½®
-#define RX_BUFFER_SIZE 256
-#define UART1_DMA_ENABLE 0
-#define UART2_DMA_ENABLE 1
-#define UART1_NODMA_ENABLE 1
-#define UART2_NODMA_ENABLE 0
+// <e> ÏµÍ³ÅäÖÃ
+#define SYSTEM_CONFIG_ENABLE 1
 
-//é‡Žç«ä¸Šä½æœºä½¿ç”¨ä¸²å£é…ç½®
+// <q> Ê¹ÄÜµ÷ÊÔ¹¦ÄÜ,Ê¹ÓÃ´®¿Ú1Êä³ö
+#define DEBUG_ENABLE 1
+
+// <e> ¸÷ÖÐ¶Ï»Øµ÷º¯ÊýÊ¹ÄÜÅäÖÃ
+#define INTERRUPT_CONFIG_ENABLE 1
+
+// <q> Ê¹ÄÜ¶¨Ê±Æ÷ÖÜÆÚÖÐ¶Ï»Øµ÷º¯Êý
+#define TIM_PERIOD_ELAPSED_CALLBACK_ENABLE 1
+
+// <o> ¶¨Ê±Æ÷ÖÜÆÚÖÐ¶Ï»Øµ÷º¯ÊýÈÎÎñÊý
+#define TIM_PERIOD_ELAPSED_CALLBACK_TASK_NUM 1
+
+// <q> Ê¹ÄÜUART½ÓÊÕÊÂ¼þ»Øµ÷º¯Êý
+#define UARTEx_RX_EVENT_CALLBACK_ENABLE 1
+// <o> UART½ÓÊÕÊÂ¼þ»Øµ÷º¯ÊýÈÎÎñÊý
+#define UARTEx_RX_EVENT_CALLBACK_TASK_NUM 1
+
+// <q> Ê¹ÄÜGPIOÍâ²¿ÖÐ¶Ï»Øµ÷º¯Êý
+#define GPIO_EXTI_CALLBACK_ENABLE 1
+// <o> GPIOÍâ²¿ÖÐ¶Ï»Øµ÷º¯ÊýÈÎÎñÊý
+#define GPIO_EXTI_CALLBACK_TASK_NUM 1
+
+// </e> ¸÷ÖÐ¶Ï»Øµ÷º¯ÊýÊ¹ÄÜÅäÖÃ
+
+// <e> UARTÅäÖÃ
+#define UART_CONFIG_ENABLE 1
+// <e> Ê¹ÄÜUART1
+#define UART1_ENABLE 1
+// <o> UART½ÓÊÕ»º³åÇø´óÐ¡
+#define UART1_BUFFER_SIZE 256
+// <o> UART1 ½ÓÊÕ·½Ê½
+// <0=> ²»Ê¹ÄÜDMA½ÓÊÕ
+// <1=> Ê¹ÄÜDMA½ÓÊÕ
+#define UART1_DMA_ENABLE 0
+// </e> Ê¹ÄÜUART1
+
+// <e> Ê¹ÄÜUART2
+#define UART2_ENABLE 1
+// <o> UART½ÓÊÕ»º³åÇø´óÐ¡
+#define UART2_BUFFER_SIZE 256
+// <o> UART2 ½ÓÊÕ·½Ê½
+// <0=> ²»Ê¹ÄÜDMA½ÓÊÕ
+// <1=> Ê¹ÄÜDMA½ÓÊÕ
+#define UART2_DMA_ENABLE 1
+// </e> Ê¹ÄÜUART2
+
+// Ò°»ðÉÏÎ»»úÊ¹ÓÃ´®¿ÚÅäÖÃ
 #define USE_UART1_DEBUG 1
 #define USE_UART2_DEBUG 0
 
-//ç¼–ç å™¨é…ç½®
+// </e> ÏµÍ³ÅäÖÃ
+// =============
+
+// <e> ¶îÍâÅäÖÃ
+// <e> µç»úÅäÖÃ
 #define ENCODE_MOTOR_ENABLE 1
+// <o> µç»úËÙ¶È²½³¤
+#define MOTOR_SPEED_STEP 100
+// <o> Ä¬ÈÏÄ¿±êËÙ¶È
+#define DEFAULT_TARGET_SPEED 20
+// </e> µç»úÅäÖÃ
+// =============
+
+// <e> ¼ÓÈÈÆ÷ÅäÖÃ
 #define ENCODE_HEATER_ENABLE 1
+// <o> ¼ÓÈÈÆ÷ÎÂ¶È²½³¤
+#define HEATER_TEMP_STEP 200
+// <o> Ä¬ÈÏÄ¿±êÎÂ¶È
+#define DEFAULT_TARGET_TEMP 210
+// </e> ¼ÓÈÈÆ÷ÅäÖÃ
+// =============
 
-//ç”µæœºé…ç½®
-#define MOTOR_SPEED_STEP 0
-#define DEFAULT_TARGET_SPEED 0
-
-//åŠ çƒ­å™¨é…ç½®
-#define HEATER_TEMP_STEP 0
-#define DEFAULT_TARGET_TEMP 0
-
-//Pidé…ç½®
-#define PID_KP 0.1
-#define PID_KI 0.5
-#define PID_KD 0.1
-
-//PWMé…ç½®
+// <e> PWMÅäÖÃ
+// =============
+// <o> PWM×î´óÕ¼¿Õ±È
 #define PWM_MAX_DUTY 99
+// <o> PWM×îÐ¡Õ¼¿Õ±È
 #define PWM_MIN_DUTY 0
-
-
+// </e> PWMÅäÖÃ
+// =============
 
 #endif
+// <<< end of configuration section >>>
